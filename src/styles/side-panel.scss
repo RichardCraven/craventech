@@ -1,0 +1,175 @@
+.side-panel-wrapper{
+    height: 400px;
+    width: 150px;
+    // border: 1px solid yellow;
+    position: absolute;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    .side-panel-option{
+        font-family: 'Jura', sans-serif;
+        height: 50px;
+        width: 100%;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        pointer-events: initial;
+        span.color{
+            height: 100%;
+            // width: 100%;
+            width: 0%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            // transition: width 0.333s;
+            // transition: opacity 0.333s;
+            transition-property: opacity, width;
+            transition-duration: 1s, 0.333s;
+            z-index: -1;
+            &.about{
+                background-color: #212b5f;
+            }
+            &.portfolio{
+                background-image: linear-gradient(rgba(49, 65, 144, 1), rgba(49, 65, 144, 0.9), rgba(49, 65, 144, 0.7));
+                &.open{
+                   background-image: linear-gradient(rgba(49, 65, 144, 1), rgba(49, 65, 144, 0.5), rgba(49, 65, 144, 0.2) 230%)
+                }
+            }
+            &.art{
+                background-color: #4156be;
+            }
+            &.contact{
+                background-color: #5467c4;
+            }
+            &.follow{
+                background-color: #7a89d1;
+            }
+            &.fadeOut{
+                opacity: 0;
+            }
+        }
+        span.sub-color{
+            width: 0%;
+            height: 100%;
+            // background-color: transparent;
+            background-image: linear-gradient(to right, rgba(49,65,144,0), rgba(49,65,144,1));
+            display: block;
+            opacity: 1;
+            transition-property: opacity, width;
+            transition-duration: 2s, 0.999s;
+            &.activated{
+                width: 100%;
+            }
+            &.fadeOut{
+                opacity: 0;
+            }
+        }
+        span.text{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+            color: white;
+            line-height: 50px;
+            padding-left: 10px;
+            transition: opacity 0.333s;
+            opacity: 1;
+            &.fadeOut{
+                opacity: 0;
+            }
+        }
+        &.hideOptions{
+            opacity: 0;
+            pointer-events: none;
+        }
+        // &:hover{
+        //     span.color{
+        //         width: 100%;
+        //     }
+        // }
+        &.hoveredOption{
+            span.color{
+                width: 100%;
+            }
+        }
+    }
+}
+.doorsandkeys{
+    background-image: url(../images/doorsandkeys_screenshot.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cahoots{
+    background-image: url(../images/cahoots_screenshot.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.blooskai{
+    background-image: url(../images/blooskai_screenshot.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.jingle{
+    background-image: url(../images/jingle_screenshot.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.item-container{
+    height: 70%;
+    // border: 1px solid white;
+    display: flex;
+    max-width: 23%;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 2px solid transparent;
+    padding: 13px;
+    &:hover{
+        border: 2px solid indianred;
+        border-radius: 10px;
+    }
+    .item-title{
+        margin-bottom: 25px;
+        background: -webkit-linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .item-description{
+        margin-top: 15px;
+        width: 100%;
+        white-space: pre-wrap;
+        background: -webkit-linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+.transitions-item {
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    will-change: transform, opacity, height;
+    white-space: nowrap;
+    cursor: pointer;
+    line-height: 80px;
+  }
+.sidebar { 
+    div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px 5px 15px;
+    }
+}

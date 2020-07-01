@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Tenali+Ramakrishna&display=swap');
+
+.main-panel{
+    height: 100vh;
+    width: 100vw;
+}
+.splash-header{
+    position: absolute;
+    color: white;
+    font-family: 'Lato';
+    // font-family: 'Tenali Ramakrishna', sans-serif;
+    font-family: 'Jura', sans-serif;
+    font-weight: 300;
+    font-size: 70px;
+    color: #9d9d9d;
+    line-height: 65px;
+    padding-left: 10px;
+    transition: right 0.5s;
+}
+.main-background{
+    background-image: url('../images/beautiful_compressed.jpg');
+    background-size: 100% 100%;
+}
